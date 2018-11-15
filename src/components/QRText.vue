@@ -1,7 +1,6 @@
 <template>
   <div class="qrtext">
-    <h1>{{ msg }}</h1>
-    <textarea rows="20" cols="20"></textarea>
+    <textarea></textarea>
   </div>
 </template>
 
@@ -17,4 +16,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+textarea {
+  /* border: none; */
+  width: 100%;
+  height: 1500px;
+}
 </style>

@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import { Tabbar, TabItem } from 'mint-ui';
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css'
+Vue.use(Mint);
 
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
+import router from './router/router.js'
 
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')

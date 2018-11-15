@@ -1,31 +1,22 @@
 <template>
     <div id="app">
-        <QRText msg="QRText" />
-        <QRCode msg="QRCode" />
-        <mt-tabbar :selected.sync="selected" fixed>
-            <mt-tab-item id="外卖">
-                <img slot="icon" src="./assets/qrtext.png">
-              文本
-            </mt-tab-item>
-              <mt-tab-item id="订单">
-                <img slot="icon" src="./assets/qrcode.png">
-              二维码
-            </mt-tab-item>
-        </mt-tabbar>
+        <router-view></router-view>
+        <qrtabbar></qrtabbar>
     </div>
 </template>
+
 <script>
-import QRText from './components/QRText.vue'
-import QRCode from './components/QRCode.vue'
+
+import QRTabbar from './components/QRTabbar.vue'
 
 export default {
     name: 'app',
     components: {
-        QRText,
-        QRCode
+        'qrtabbar': QRTabbar
     }
 }
 </script>
+
 <style>
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -33,6 +24,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 </style>
