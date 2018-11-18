@@ -8,9 +8,11 @@
 <script>
 
 import QRTabbar from './components/QRTabbar.vue'
+import store from './store/index.js'
 
 export default {
     name: 'app',
+    store,
     components: {
         'qrtabbar': QRTabbar
     }
