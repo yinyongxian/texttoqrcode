@@ -1,14 +1,21 @@
 <template>
   <div class="qrtext">
-    <textarea placeholder="请输入二维码内容"></textarea>
+    <textarea v-model="message" placeholder="请输入二维码内容"></textarea>
   </div>
 </template>
 
 <script>
 export default {
   name: 'QRText',
-  props: {
-    msg: String
+  computed: {
+    message: {
+      get () {
+        return this.$store.state.message
+      },
+      set (value) {
+        this.$store.commit('updateMessage', value)
+      }
+    }
   }
 }
 </script>
@@ -21,9 +28,17 @@ export default {
   padding: 0px;
 }
 
+#qrtext {
+  height: 100%;
+  position: relative;
+}
+
 textarea {
-  /* border: none; */
-  width: 100%;
-  height: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 55px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="qrcode">
-    <h1>{{ 尹永贤 }}</h1>
-    <vue-qr :bgSrc='src' :logoSrc="src2" :text="this.$store.state.qrtext" :size="200"></vue-qr>
+    <p>{{ this.$store.state.qrtext }}</p>
+    <vue-qr :text="this.$store.state.message" :size="200"></vue-qr>
   </div>
 </template>
 
@@ -11,9 +11,6 @@ import VueQr from 'vue-qr'
 
 export default {
   name: 'QRCode',
-  props: {
-    msg: String
-  },
   components:{
     VueQr
   }

@@ -1,4 +1,3 @@
 module.exports = {
-    baseUrl: './',
-      assetsDir:''
-  }
+  baseUrl: './',
+}
