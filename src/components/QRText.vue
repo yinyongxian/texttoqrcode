@@ -1,6 +1,6 @@
 <template>
   <div class="qrtext">
-    <textarea></textarea>
+    <textarea placeholder="请输入二维码内容"></textarea>
   </div>
 </template>
 
