@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    message: '尹永贤'
+    qrtext: ''
   },
   mutations: {
-    updateMessage (state, message) {
-      state.message = message
+    updateQRText (state, message) {
+      state.qrtext = message
     }
   }
 })

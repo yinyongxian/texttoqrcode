@@ -10,10 +10,10 @@ export default {
   computed: {
     message: {
       get () {
-        return this.$store.state.message
+        return this.$store.state.qrtext
       },
       set (value) {
-        this.$store.commit('updateMessage', value)
+        this.$store.commit('updateQRText', value)
       }
     }
   }
@@ -22,7 +22,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 * {
   margin: 0px;
   padding: 0px;
@@ -39,5 +38,8 @@ textarea {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;s
+    overflow: auto;
+    word-break: break-all;
 }
 </style>
